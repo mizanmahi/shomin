@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    width: 100%;
+    background-image: linear-gradient(
+        to right, 
+        #d5f2f7da, 
+        #292853d7), 
+        url(../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg);
+    background-position:  center;
+    background-size:   cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.logo-box .logo {
+    height: 100px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #1f0531;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 800px;
+    letter-spacing: 52px;
+    transform: translateX(18px);
+
+    animation: moveInRight 1s ease-in;
+}
+.heading-primary-sub {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 8px;
+
+    animation: moveInLeft 1s ease-in;
+    margin-bottom: 60px;
+}
+
+/* Animatiions */
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(18);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px;
+    transition: all .2s;
+    font-size: 18px;
+    border-radius: 100px;
+    color: #856999;
+    position: relative;
+
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) ;
+    color: #1f0531;
+}
+
+.btn:active {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) ;
+    color: #1f0531;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #2a1049;
+
+}
+
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .2s ease-in;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInUp .4s ease-in .75s;
+    animation-fill-mode: backwards;
+}
