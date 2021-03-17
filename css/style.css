@@ -1,15 +1,23 @@
-* {
+*,
+*::before,
+::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "Lato", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.6;
     padding: 30px;
-}
+
+    box-sizing: border-box;
+}  
 
 .header {
     height: 95vh;
@@ -25,13 +33,13 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 3rem;
+    left: 3rem;
 }
-.logo-box .logo {
-    height: 100px;
+.header__logo {
+    height: 10rem;
 }
 
 .text-box {
@@ -49,23 +57,23 @@ body {
 
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 800px;
-    letter-spacing: 52px;
+    letter-spacing: 5.2rem;
     transform: translateX(18px);
 
     animation: moveInRight 1s ease-in;
 }
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 8px;
+    letter-spacing: 0.8rem;
 
     animation: moveInLeft 1s ease-in;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 /* Animatiions */
@@ -73,10 +81,10 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
     100% {
         opacity: 1;
@@ -87,10 +95,10 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     100% {
         opacity: 1;
@@ -101,7 +109,7 @@ body {
 @keyframes moveInUp {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
     
     100% {
@@ -116,28 +124,28 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     transition: all .2s;
-    font-size: 18px;
-    border-radius: 100px;
+    font-size: 1.8rem;
+    border-radius: 10rem;
     color: #856999;
     position: relative;
 
 }
 
 .btn:hover {
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) ;
     color: #1f0531;
 }
 
 .btn:active {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) ;
+    transform: translateY(-0.8rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2) ;
     color: #1f0531;
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #2a1049;
 
@@ -148,7 +156,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -156,7 +164,7 @@ body {
     transition: .2s ease-in;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -165,7 +173,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInUp .4s ease-in .75s;
     animation-fill-mode: backwards;
 }
