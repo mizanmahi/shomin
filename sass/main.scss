@@ -1,187 +1,22 @@
+@import "./abstract/functions";
+@import "./abstract/variables";
+@import "./abstract/mixins";
 
-$color-primary-dark: #1f0531;
-$color-primary-light: #360757;
+@import "./base/base";
+@import "./base/animation";
+@import "./base/typography";
+@import "./base/utilities";
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+@import "./components/button";
+@import "./components/composition";
 
-html {
-    font-size: 62.5%;
-}
+@import "./layout/header";
+@import "./layout/grid";
 
-body {
-    font-family: "Lato", sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    padding: 30px;
-
-    box-sizing: border-box;
-}  
-
-.header {
-    height: 95vh;
-    width: 100%;
-    background-image: linear-gradient(
-        to right, 
-        #d5f2f7da, 
-        #292853d7), 
-        url(../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg);
-    background-position:  center;
-    background-size:   cover;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);
-    position: relative;
-
-    &__logo-box {
-        position: absolute;
-        top: 3rem;
-        left: 3rem;
-    }
-
-    &__logo {
-        height: 10rem;
-    }
-
-    &__text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-}
+@import "./pages/homepage";
 
 
 
 
-.heading-primary {
-    color: $color-primary-dark;
-    text-transform: uppercase;
-    backface-visibility: hidden;
 
-    &--main {
-        display: block;
-        font-size: 6rem;
-        font-weight: 800px;
-        letter-spacing: 5.2rem;
-        transform: translateX(18px);
-    
-        animation: moveInRight 1s ease-in;
-    }
-    &--sub {
-        display: block;
-        font-size: 1.6rem;
-        font-weight: 600;
-        letter-spacing: 0.8rem;
-    
-        animation: moveInLeft 1s ease-in;
-        margin-bottom: 6rem;
-    }
-
-}
-
-/* Animatiions */
-
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    80% {
-        transform: translateX(1rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(18);
-    }
-}
-
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    80% {
-        transform: translateX(-1rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes moveInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(10rem);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.btn {
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        display: inline-block;
-        padding: 1.5rem 4rem;
-        transition: all .2s;
-        font-size: 1.8rem;
-        border-radius: 10rem;
-        color: #856999;
-        position: relative;
-    }
-
-    &:hover {
-        transform: translateY(-1rem);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) ;
-        color: $color-primary-dark;
-
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
-    
-    &:active {
-        transform: translateY(-0.8rem);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2) ;
-        color: $color-primary-dark;
-    }
-    
-    &--white {
-        background-color: #fff;
-        color: #2a1049;
-        
-        &::after {
-            background-color: #fff;
-        }
-    }
-    
-    &::after {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: .2s ease-in;
-    }
-    
-    &--animated {
-        animation: moveInUp .4s ease-in .75s;
-        animation-fill-mode: backwards;
-    }
-}
 

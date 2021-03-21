@@ -16,6 +16,5 @@
     }
     .col-1-of-2 {
         width: calc((100% - #{$gutter-vertical}) / 2);
-        
     }
 }

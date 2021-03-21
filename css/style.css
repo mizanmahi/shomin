@@ -9,51 +9,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  padding: 30px;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  width: 100%;
-  background-image: linear-gradient(to right, #d5f2f7da, #292853d7), url(../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg);
-  background-position: center;
-  background-size: cover;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 3rem;
-    left: 3rem; }
-  .header__logo {
-    height: 10rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #1f0531;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 800px;
-    letter-spacing: 5.2rem;
-    transform: translateX(18px);
-    animation: moveInRight 1s ease-in; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 600;
-    letter-spacing: 0.8rem;
-    animation: moveInLeft 1s ease-in;
-    margin-bottom: 6rem; }
+  box-sizing: border-box;
+  color: #777; }
 
 /* Animatiions */
 @keyframes moveInRight {
@@ -84,6 +41,84 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding: 30px;
+  box-sizing: border-box; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 800px;
+    letter-spacing: 5.2rem;
+    transform: translateX(18px);
+    animation: moveInRight 1s ease-in; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
+    animation: moveInLeft 1s ease-in;
+    margin-bottom: 6rem; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #12aee7, #180427);
+  -webkit-background-clip: text;
+  display: inline-block;
+  color: transparent;
+  transition: all .2s;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .heading-secondary:hover {
+    transform: skewX(5deg) skewY(3deg) scale(1.2); }
+
+.heading-tartiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #180427;
+  display: inline-block;
+  padding: 3px;
+  text-decoration: none;
+  border-bottom: 1px solid #180427;
+  transition: all .1s; }
+
+.btn-text:hover {
+  background: #050442;
+  color: #fff;
+  box-shadow: 0 0.8rem 2rem #000;
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem #000; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-center-text {
+  text-align: center; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -98,7 +133,7 @@ body {
 .btn:hover {
   transform: translateY(-1rem);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  color: #1f0531; }
+  color: #180427; }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -106,7 +141,7 @@ body {
 .btn:active {
   transform: translateY(-0.8rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  color: #1f0531; }
+  color: #180427; }
 
 .btn--white {
   background-color: #fff;
@@ -129,3 +164,67 @@ body {
 .btn--animated {
   animation: moveInUp .4s ease-in .75s;
   animation-fill-mode: backwards; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    position: absolute;
+    z-index: 10;
+    transition: .2s all;
+    outline-offset: 1.5rem;
+    border-radius: 1rem; }
+    .composition__photo:hover {
+      z-index: 20;
+      transform: scale(1.3);
+      outline: 1.5rem solid #050442; }
+  .composition_p2 {
+    top: 5rem;
+    left: 40%; }
+  .composition_p3 {
+    top: 12rem;
+    right: 30%; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(18, 174, 231, 0.7), rgba(5, 4, 66, 0.7)), url(../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem; }
+  .header__logo {
+    height: 10rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 8rem) / 2); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -15vh; }
