@@ -3,9 +3,9 @@
     width: 100%;
     background-image: linear-gradient(
         to right, 
-        rgba($color-gradient-light, .7), 
-        rgba($color-gradient-dark, .7)), 
-        url(../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg);
+        $color-primary-light, 
+        $color-primary-dark) ;
+        
     background-position:  center;
     background-size:   cover;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);

@@ -38,7 +38,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background-image: linear-gradient(to right, $color-gradient-light, $color-primary-dark);
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     display: inline-block;
     color: transparent;
@@ -77,7 +77,7 @@ body {
     }
 
     &:hover {
-        background: $color-gradient-dark;
+        background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         color: $color-white;
         box-shadow: 0 .8rem 2rem $color-black;
         transform: translateY(-2px);

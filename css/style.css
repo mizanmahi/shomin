@@ -72,7 +72,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-image: linear-gradient(to right, #12aee7, #180427);
+  background-image: linear-gradient(to right, #ad5389, #3c1053);
   -webkit-background-clip: text;
   display: inline-block;
   color: transparent;
@@ -93,15 +93,15 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #180427;
+  color: #3c1053;
   display: inline-block;
   padding: 3px;
   text-decoration: none;
-  border-bottom: 1px solid #180427;
+  border-bottom: 1px solid #3c1053;
   transition: all .1s; }
 
 .btn-text:hover {
-  background: #050442;
+  background: linear-gradient(to right, #ad5389, #3c1053);
   color: #fff;
   box-shadow: 0 0.8rem 2rem #000;
   transform: translateY(-2px); }
@@ -133,7 +133,7 @@ body {
 .btn:hover {
   transform: translateY(-1rem);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  color: #180427; }
+  color: #3c1053; }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -141,7 +141,7 @@ body {
 .btn:active {
   transform: translateY(-0.8rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  color: #180427; }
+  color: #3c1053; }
 
 .btn--white {
   background-color: #fff;
@@ -198,16 +198,79 @@ body {
   cursor: pointer; }
   .feature-box__icon {
     font-size: 6rem;
-    background-image: linear-gradient(to right, #12aee7, #180427);
+    background-image: linear-gradient(to right, #ad5389, #3c1053);
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-10px) scale(1.05); }
 
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 48rem; }
+  .card__side {
+    height: 48rem;
+    transition: all .6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+    .card__side--front {
+      background-color: white; }
+    .card__side--back {
+      background-color: steelblue;
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right, #ad5389, #3c1053); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture-1 {
+      background-image: linear-gradient(to right, #ad5389, #3c1053), url("../img/deals-img.jpg");
+      background-position: center;
+      background-size: cover; }
+  .card__heading {
+    font-size: 2.8rem;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 65%; }
+  .card__heading--span {
+    width: 60%;
+    -webkit-box-decoration-break: clone;
+    padding: .7rem; }
+    .card__heading--span--1 {
+      background-image: linear-gradient(to right, #ad5389, #3c1053); }
+  .card__details {
+    margin-top: 1.5rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1rem;
+        font-size: 1.5rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 3px solid #f7f7f7; }
+
 .header {
   height: 95vh;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(18, 174, 231, 0.7), rgba(5, 4, 66, 0.7)), url(../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg);
+  background-image: linear-gradient(to right, #ad5389, #3c1053);
   background-position: center;
   background-size: cover;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);
@@ -258,10 +321,15 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right, rgba(18, 174, 231, 0.7), rgba(5, 4, 66, 0.7)), url(../img/startup.jpg);
+  background-image: linear-gradient(to right, rgba(173, 83, 137, 0.8), rgba(60, 16, 83, 0.8)), url(../img/startup.jpg);
   background-position: center;
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 25rem 0;
+  margin-top: -10rem; }

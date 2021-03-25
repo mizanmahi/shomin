@@ -1,0 +1,100 @@
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 48rem;
+
+    &__side {
+        height: 48rem;
+        transition: all .6s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        overflow: hidden;
+
+        &--front {
+        background-color: white;
+        }
+        &--back {
+            background-color: steelblue;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &-1 {
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark),
+            url("../img/deals-img.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        color: white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 65%;
+    }
+
+    &__heading--span {
+        width: 60%;
+        -webkit-box-decoration-break: clone;
+        padding: .7rem;
+
+        &--1{
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        }
+
+        &--2{
+
+        }
+
+        &--3{
+
+        }
+    }
+
+    &__details {
+
+        margin-top: 1.5rem;
+
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                text-transform: uppercase;
+                padding: 1rem;
+                font-size: 1.5rem;
+
+                &:not(:last-child){
+                    border-bottom: 3px solid $color-grey-light;
+                }
+            }
+        }
+    }
+}
