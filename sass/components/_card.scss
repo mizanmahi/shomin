@@ -25,6 +25,14 @@
             &-1 {
                 background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
             }
+
+            &-2{
+                background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+            }
+            &-3{
+                background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+            }
+
         }
     }
 
@@ -39,12 +47,23 @@
         height: 23rem;
         background-blend-mode: screen;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        background-position: center;
+        background-size: cover;
 
         &-1 {
             background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark),
             url("../img/deals-img.jpg");
-            background-position: center;
-            background-size: cover;
+            
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark),
+            url("../img/card-img.jpg");
+        }
+
+        &-3 {
+            background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark),
+            url("../img/card-img2.jpg");
         }
     }
 
@@ -62,6 +81,8 @@
     &__heading--span {
         width: 60%;
         -webkit-box-decoration-break: clone;
+        -moz-box-decoration-break: clone;
+        -o-box-decoration-break: clone;
         padding: .7rem;
 
         &--1{
@@ -69,11 +90,11 @@
         }
 
         &--2{
-
+            background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
         }
 
         &--3{
-
+            background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
         }
     }
 
@@ -97,4 +118,29 @@
             }
         }
     }
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    &__price-box{
+        color: $color-white;
+
+    }
+
+    &__price-only{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+    }
+    &__price-value{
+        font-size: 6rem;
+        margin-bottom: 2rem;
+    }
+    
 }
