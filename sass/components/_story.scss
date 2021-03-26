@@ -1,0 +1,27 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 2rem 6rem rgba($color: #000000, $alpha: .1);
+    padding: 6rem;
+    border-radius: 3px;
+    background-color: $color-white;
+    transform: skew(-12deg);
+
+    &__shape {
+        height: 15rem;
+        width: 15rem;
+        background-color: steelblue;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-2rem) skew(12deg);
+    }
+
+    &__text {
+        transform: skew(12deg);
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
