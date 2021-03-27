@@ -79,7 +79,7 @@ body {
     &:hover {
         background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         color: $color-white;
-        box-shadow: 0 .8rem 2rem $color-black;
+        box-shadow: 0 .8rem 2rem rgba($color: $color-black, $alpha: .2);
         transform: translateY(-2px);
     }
 
