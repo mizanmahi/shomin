@@ -125,7 +125,10 @@ body {
 .u-margin-top-big {
   margin-top: 10rem; }
 
-.btn:link, .btn:visited {
+.u-margin-top-small {
+  margin-top: 4rem; }
+
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -133,7 +136,9 @@ body {
   transition: all .2s;
   font-size: 1.8rem;
   border-radius: 10rem;
-  position: relative; }
+  position: relative;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-1rem);
@@ -142,10 +147,11 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-0.8rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  color: #3c1053; }
+  color: #ad5389; }
 
 .btn--white {
   background-color: #fff;
@@ -373,7 +379,8 @@ body {
   border: none;
   display: block;
   width: 80%;
-  border-bottom: 3px solid transparent; }
+  border-bottom: 3px solid transparent;
+  transition: all .3s; }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -395,6 +402,45 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 48%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-input:checked + .form__radio-label .form__radio-btn::after {
+  opacity: 1; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  padding-right: 1rem;
+  position: relative;
+  padding-left: 4.5rem;
+  cursor: pointer; }
+
+.form__radio-btn {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #ad5389;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.7rem; }
+  .form__radio-btn::after {
+    content: '';
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: #ad5389;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; }
 
 .header {
   height: 95vh;
@@ -477,8 +523,7 @@ body {
   background-size: 100%;
   background-position: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.2); }
   .book__form {
     width: 50%;
     padding: 6rem; }
