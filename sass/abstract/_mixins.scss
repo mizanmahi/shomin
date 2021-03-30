@@ -5,3 +5,35 @@
         clear: both;
     }
 }
+
+// media query manager
+
+/*
+Possible breakpoints
+1 phone <= 600px
+2 tab-port <= 900px
+3 tab-land <= 1200
+4 [1200-1800] for the general desktop
+5 big-desktop >= 1800
+
+Its better to use em in media queries
+1em = 16px
+*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em){ @content }; // 600 / 16 = 37.5em
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em){ @content }; // 900 / 16 = 56.25em
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em){ @content }; // 1200 / 16 = 75em
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em){ @content }; // 1800 / 16 = 112.5em
+    }
+}

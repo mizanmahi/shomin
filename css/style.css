@@ -1,3 +1,14 @@
+/*
+Possible breakpoints
+1 phone <= 600px
+2 tab-port <= 900px
+3 tab-land <= 1200
+4 [1200-1800] for the general desktop
+5 big-desktop >= 1800
+
+Its better to use em in media queries
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -7,10 +18,23 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
+  padding: 3rem;
   box-sizing: border-box;
   color: #777; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 /* Animatiions */
 @keyframes moveInRight {
@@ -45,7 +69,6 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
-  padding: 30px;
   box-sizing: border-box; }
 
 .heading-primary {
@@ -57,15 +80,24 @@ body {
     font-size: 6rem;
     font-weight: 800px;
     letter-spacing: 5.2rem;
-    transform: translateX(18px);
+    transform: translateX(1.8rem);
     animation: moveInRight 1s ease-in; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 2rem;
+        transform: translateX(0.7rem); } }
   .heading-primary--sub {
     display: block;
     font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 0.8rem;
+    letter-spacing: 1rem;
     animation: moveInLeft 1s ease-in;
     margin-bottom: 6rem; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.2rem;
+        letter-spacing: .6rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -80,6 +112,14 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
   .heading-secondary:hover {
     transform: skewX(5deg) skewY(3deg) scale(1.2); }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem;
+      letter-spacing: 1px; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem;
+      letter-spacing: .8px; } }
 
 .heading-tartiary {
   font-size: 1.6rem;
