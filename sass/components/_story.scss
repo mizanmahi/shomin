@@ -7,6 +7,12 @@
     background-color: rgba($color: $color-white, $alpha: .8);
     transform: skew(-12deg);
 
+    @include respond(tab-port){
+        width: 100%;
+        transform: skew(0deg);
+        padding: 4rem;
+    }
+
     &__shape {
         height: 15rem;
         width: 15rem;
@@ -15,10 +21,19 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-2rem) skew(12deg);
         position: relative;
+
+        @include respond(tab-port){
+            transform: translateX(-2rem) skew(0deg);
+        }
+
     }
 
     &__text {
         transform: skew(12deg);
+
+        @include respond(tab-port){
+            transform: skew(0);
+        }
     }
 
     &__img {

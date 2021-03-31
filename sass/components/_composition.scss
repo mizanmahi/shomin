@@ -6,9 +6,17 @@
         width: 55%;
         position: absolute;
         z-index: 10;
+        box-shadow: $default-box-shadow;
         transition: .2s all;
         outline-offset: 1.5rem;
         border-radius: 1rem;
+
+        @include respond(tab-port){
+            position: relative;
+            float: left;
+            width: 45%;
+            box-shadow: $default-box-shadow;
+        }
         
 
         &:hover {
@@ -20,14 +28,21 @@
 
     &_p1 {
 
+        @include respond(tab-port){
+            margin-right: 2rem;
+        }
+
     }
     &_p2 {
         top: 5rem;
         left: 40%;
-    }
-    &_p3 {
-        top: 12rem;
-        right: 30%;
+
+        @include respond(tab-port){
+            top: 0;
+            left: 0;
+            
+        }
+        
     }
 
     &:hover &__photo:not(:hover) {

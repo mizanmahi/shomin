@@ -144,4 +144,49 @@
         margin-bottom: 2rem;
     }
     
+    @include respond(tab-port){
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background-color: $color-white;
+    
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+    
+            &--back {
+            
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+    
+            }
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0deg);
+        }
+    
+        &__cta{
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 4rem 0;
+        }
+    
+        &__price-only{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+    
+        }
+        &__price-value{
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+    }
+
 }
