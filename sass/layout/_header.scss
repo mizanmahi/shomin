@@ -2,9 +2,10 @@
     height: 95vh;
     width: 100%;
     background-image: linear-gradient(
-        to right, 
-        $color-primary-light, 
-        $color-primary-dark) ;
+        to right,
+        rgba($color-primary-light, .8), 
+        rgba($color-primary-dark, .8)),
+        url("../../img/header-banner.jpg") ;
         
     background-position:  center;
     background-size:   cover;
@@ -15,6 +16,15 @@
     @include respond(phone){
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%);
+    }
+
+    @media (min-resolution: 97dpi) and (min-width: 37.5em),
+    (min-width: 112.5em) {
+        background-image: linear-gradient(
+            to right,
+            rgba($color-primary-light, .8), 
+            rgba($color-primary-dark, .8)),
+            url("../../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg");   
     }
 
     &__logo-box {

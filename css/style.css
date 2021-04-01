@@ -562,7 +562,7 @@ body {
 .popup {
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -570,6 +570,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.2); } }
   .popup__content {
     width: 75%;
     background: #fff;
@@ -647,7 +652,7 @@ body {
 .header {
   height: 95vh;
   width: 100%;
-  background-image: linear-gradient(to right, #ad5389, #3c1053);
+  background-image: linear-gradient(to right, rgba(173, 83, 137, 0.8), rgba(60, 16, 83, 0.8)), url("../../img/header-banner.jpg");
   background-position: center;
   background-size: cover;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80vh, 0% 100%);
@@ -657,6 +662,9 @@ body {
     .header {
       -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%);
       clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%); } }
+  @media (min-resolution: 97dpi) and (min-width: 37.5em), (min-width: 112.5em) {
+    .header {
+      background-image: linear-gradient(to right, rgba(173, 83, 137, 0.8), rgba(60, 16, 83, 0.8)), url("../../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg"); } }
   .header__logo-box {
     position: absolute;
     top: 1rem;
