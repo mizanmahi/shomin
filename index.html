@@ -27,11 +27,11 @@
 
       <nav class="navigation__nav">
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link">About Shomin</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Our Service</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Popular Deals!</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Book Now!</a></li>
+          <li class="navigation__item"><a href="#section-about" class="navigation__link">About Shomin</a></li>
+          <li class="navigation__item"><a href="#section-features" class="navigation__link">Our Service</a></li>
+          <li class="navigation__item"><a href="#section-tours" class="navigation__link">Popular Deals!</a></li>
+          <li class="navigation__item"><a href="#section-stories" class="navigation__link">Stories</a></li>
+          <li class="navigation__item"><a href="#section-book" class="navigation__link">Book Now!</a></li>
         </ul>
       </nav>
     </div> <!--End of navigation-->
@@ -51,7 +51,7 @@
     </header> <!--End of header-->
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
        <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
           Explore more about shomin
@@ -80,7 +80,7 @@
       </div>
       </section> <!--End of about section -->
 
-      <section class="section-features">  
+      <section class="section-features" id="section-features">  
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -228,7 +228,7 @@
         </div>
       </section> <!-- end of tour section -->
 
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <div class="bg-video__content">
             <video autoplay muted loop>
@@ -275,7 +275,7 @@
           <a href="#" class="btn-text">Read All Stories &rarr;</a>
         </div>
       </section> <!-- End of story section -->
-      <section class="section-book">
+      <section class="section-book" id="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -347,8 +347,8 @@
       </div>
     </footer>
 
-    <div class="popup" id="popup">
-      <div class="popup__content">
+    <div class="popup activepopup" id="popup">
+      <div class="popup__content activecontent">
         <div class="popup__left">
           <img src="./img/popup1.jpg" alt="popupPhoto" class="popup__img"> 
           <img src="./img/popup2.jpg" alt="popupPhoto" class="popup__img"> 
@@ -360,9 +360,11 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. <a href="#" class="footer__link"> SHOMIN </a> Cumque consequatur eius neque tempore voluptatum facilis temporibus, sit optio culpa tenetur magnam sunt quidem repellendus sapiente. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, modi dignissimos officia in voluptate mollitia.
           </p>
           <a href="#" class="btn btn--violet u-margin-top-mid">Order Now!</a>
-          <a href="#section-tours" class="popup__close-btn">&times;</a>
+          <a href="#section-tours" class="popup__close-btn" id="pop-close-btn">&times;</a>
         </div>
       </div>
     </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
