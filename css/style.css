@@ -669,7 +669,7 @@ body {
       clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%); } }
   @media only screen and (min-resolution: 97dpi) and (max-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right, rgba(173, 83, 137, 0.8), rgba(60, 16, 83, 0.8)), url("../img/mylene-tremoyet-wt5hvDc0bYE-unsplash.jpg"); } }
+      background-image: linear-gradient(to right, rgba(173, 83, 137, 0.8), rgba(60, 16, 83, 0.8)), url("../img/header-banner1.jpg"); } }
   .header__logo-box {
     position: absolute;
     top: 1rem;
